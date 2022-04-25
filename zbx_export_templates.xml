@@ -1,0 +1,2096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.4</version>
+    <date>2022-04-25T03:02:54Z</date>
+    <groups>
+        <group>
+            <uuid>065dcaec1c7d4bf5b8f6e87098260b2c</uuid>
+            <name>KKM</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <uuid>c11121cdde2347b599f8ebb60930e2fe</uuid>
+            <template>KKT</template>
+            <name>KKT</name>
+            <groups>
+                <group>
+                    <name>KKM</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>2a0d6d4a7bd54f44a16d66dfb5a65857</uuid>
+                    <name>Zabbix agent не досутпен</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>agent.ping</key>
+                    <history>5d</history>
+                    <trends>30d</trends>
+                </item>
+                <item>
+                    <uuid>1a778fa5d55841b0a0f2f47b7fcd4813</uuid>
+                    <name>Признак агента</name>
+                    <type>DEPENDENT</type>
+                    <key>agentSign</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.agentSign</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Признак агента</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>eaf854ce58834d3fb741d4e64a65957d</uuid>
+                    <name>Признак автоматического режима</name>
+                    <type>DEPENDENT</type>
+                    <key>autoModeSign</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.autoModeSign</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Признак автоматического режима</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>24f7ae0d275f4ae59bf6d20797e42477</uuid>
+                    <name>Признак АС БСО</name>
+                    <type>DEPENDENT</type>
+                    <key>bsoSign</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.bsoSign</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Признак АС БСО</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>ec0a65969fa14d9e983b14c66b78c4ad</uuid>
+                    <name>Признак шифрования</name>
+                    <type>DEPENDENT</type>
+                    <key>encryptionSign</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.encryptionSign</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Признак шифрования</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>ca4c763e3651439ebf2d79f96ae15bf8</uuid>
+                    <name>Дата и время последнего успешного соединение</name>
+                    <type>DEPENDENT</type>
+                    <key>err.fn.datetime</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrFNDateTime</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Дата и время последнего успешного соединение</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>a987c48591924f7080c06f1336c60881</uuid>
+                    <name>Версия ФФД</name>
+                    <type>DEPENDENT</type>
+                    <key>ffdVersion</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ffdVersion</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Версия ФФД</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>1a9de008b894407eb6e7e87b56c971db</uuid>
+                    <name>Адрес сайта ФНС</name>
+                    <type>DEPENDENT</type>
+                    <key>fnsUrl</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.fnsUrl</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Адрес сайта ФНС</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>9deef9eb28fe4a1984500fccec2bb1c4</uuid>
+                    <name>icmploss</name>
+                    <key>icmppingloss</key>
+                    <units>%</units>
+                </item>
+                <item>
+                    <uuid>0dce71b3fc0e4711ab50a9bc25542f28</uuid>
+                    <name>pingsec</name>
+                    <key>icmppingsec</key>
+                    <history>30d</history>
+                    <trends>30d</trends>
+                    <value_type>FLOAT</value_type>
+                </item>
+                <item>
+                    <uuid>1641ae0f867e4de49bfa23632b789102</uuid>
+                    <name>icmpping</name>
+                    <key>icmpping[,4]</key>
+                    <history>30d</history>
+                    <trends>30d</trends>
+                    <value_type>FLOAT</value_type>
+                </item>
+                <item>
+                    <uuid>5ef313928d3e49b7a41656a3dd67679b</uuid>
+                    <name>Признак ККТ для расчетов в сети Интернет</name>
+                    <type>DEPENDENT</type>
+                    <key>internetSign</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.internetSign</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Признак ККТ для расчетов в сети Интернет</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>9f0f0e2677374e5c9919ee71814a96f3</uuid>
+                    <name>Дата закрытия смены</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.date.close.shift</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.DateCloseShift</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Дата закрытия смены</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>01d3b032afa34e8a8cce20ef36e8277f</uuid>
+                    <name>Последняя отправка в ОФД</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.DateTimeLastSendToOFD</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.DateTimeLastSendToOFD</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Последняя отправка в ОФД</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>f00f5945920445b7b15e35eeea7cb7ff</uuid>
+                    <name>Осталось рабочих дней ФН</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.daysRemain</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.daysRemain</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>ФН</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ ФН</tag>
+                            <value>Осталось рабочих дней ФН</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>14d84e063d334972aa03cd5c58956c5a</uuid>
+                            <expression>last(/KKT/kkt.daysRemain)&gt;0 and last(/KKT/kkt.daysRemain)&lt;30</expression>
+                            <name>Истекает срок ФН</name>
+                            <opdata>Осталось {INTEM.VALUE}</opdata>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                        <trigger>
+                            <uuid>152a94ddb22e4e4ab1ed6ed564176fb2</uuid>
+                            <expression>last(/KKT/kkt.daysRemain)&lt;=10 and last(/KKT/kkt.daysRemain)&gt;0</expression>
+                            <name>У {HOST.NAME} истекает срок ФН Требуется замена!</name>
+                            <opdata>Осталось {INTEM.VALUE}</opdata>
+                            <priority>AVERAGE</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>0a935a67de1f4ac58ab67ea8f558de33</uuid>
+                    <name>Возраст не отправленного документа в ФН</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.doc.fn.age</key>
+                    <delay>0</delay>
+                    <units>Д.</units>
+                    <description>Возраст в днях ПЕРВОГО не отправленного документа в ФН</description>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.AgeDaysFirstDontSendDocInFN</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Возраст ФН</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>a84194624f694211a388172e2a9559ae</uuid>
+                            <expression>last(/KKT/kkt.doc.fn.age)&gt;2</expression>
+                            <name>Чеки не уходят более {ITEM.VALUE}</name>
+                            <opdata>Возраст не отправленного документа в ФН {kkt.doc.fn.age}</opdata>
+                            <priority>DISASTER</priority>
+                            <description>Возраст не отправленного документа в ФН {kkt.doc.fn.age}</description>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>231fc99fbe654c2f90332d4591d1c823</uuid>
+                    <name>Ошибка реквизитов</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrAttributesFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrAttributesFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка реквизитов</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>7321f3a0c6854bfb80aa7fb4a8a80593</uuid>
+                    <name>Ошибка счетчиков</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrCounterFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrCounterFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка счетчиков</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>cca42f341b5d4b288b591b28711ffaf1</uuid>
+                    <name>Команда ФН на которой произошла ошибка</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrFNCommandCode</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrFNCommandCode</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Команда ФН на которой произошла ошибка</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>2cfe5a0fa70a400ca44070620cac391f</uuid>
+                    <name>Номер документа на котором произошла ошибка</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrFNDocumentNumber</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrFNDocumentNumber</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Номер документа на котором произошла ошибка</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>b47f96752a6d41098edd3ca86d587b59</uuid>
+                            <expression>last(/KKT/kkt.ErrFNDocumentNumber)&gt;5</expression>
+                            <name>Есть документы с ошибками</name>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Документ</tag>
+                                    <value>Ошибка</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>eb3909873c4a4e6ab9dd3b5dc7d9ba85</uuid>
+                    <name>Ошибка ФН фатальная</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrFnFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrFnFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка ФН фатальная</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>b21314a3862a48449c2051da53e708d7</uuid>
+                    <name>Ошибка ФН</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrFNFnErrorText</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrFNFnErrorText</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка ФН</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>4649bdfd72234ddb9ede3c4f8e814441</uuid>
+                    <name>Ошибка сети</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrFNNetworkErrorText</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrFNNetworkErrorText</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка сети</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>9878f926a9ec432e997a49bd7fd5c0a6</uuid>
+                    <name>Ошибка ОФД</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrFNOfdErrorText</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrFNOfdErrorText</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка ОФД</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>81351c5b0d474513ac0504443a28e703</uuid>
+                    <name>Ошибка Фатальная аппаратная</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrHardFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrHardFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка Фатальная аппаратная</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>cc707cff914c4d3e82c6dfb7dccff1df</uuid>
+                    <name>Ошибка Установлен ФН из другой ККТ</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrInvalidFN</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrInvalidFN</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Нет</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Да</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка Установлен ФН из другой ККТ</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>ebc8a686eefe453385612603d96169d3</uuid>
+                    <name>Ошибка диспетчера памяти</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrMemoryManagerFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrMemoryManagerFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка диспетчера памяти</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>f3f9871f14264f629dff2b1594f5fbdb</uuid>
+                    <name>Ошибка не введен ЗН ККТ</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrNoSerialNumber</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrNoSerialNumber</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Ошибок нет</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Аларм!</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Не введен ЗН ККТ</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>6c6d36257ac0492bae58224dfc61fd61</uuid>
+                    <name>Ошибка часов реального времени</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrRtcFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrRtcFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка часов реального времени</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>f74e79d644224fb9b0a2ae6e589e491c</uuid>
+                    <name>Ошибка Шаблоны повреждены или отсутствуют</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrScriptFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrScriptFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка Шаблоны повреждены или отсутствуют</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>30d823d8e8314dc795d8d8432bda01fb</uuid>
+                    <name>Ошибка сервисных регистров</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrServiceCountersFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrServiceCountersFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка сервисных регистров</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>c416f6be3c184c52b2d3f19553748e48</uuid>
+                    <name>Ошибка в настройках</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrSettings</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrSettings</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка в настройках</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>2e1a357e46f24799bea8a993489b19c9</uuid>
+                    <name>Ошибка универсальных счетчиков</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrUniversalCountersFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrUniversalCountersFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка универсальных счетчиков</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>b719c7472fd64723aee5033a476f0c9f</uuid>
+                    <name>Ошибка пользовательской памяти</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrUserMemoryFault</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrUserMemoryFault</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка пользовательской памяти</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>2efc28392c564b6d9e048ec74fea9880</uuid>
+                    <name>Ошибка Требуется перезагрузка</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ErrWaitForReboot</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ErrWaitForReboot</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Нет</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Да</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ Ошибка</tag>
+                            <value>Ошибка Требуется перезагрузка</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>86ebf617a9e649c6ac92e26bbab8f6bf</uuid>
+                    <name>Статус информационного обмена с ОФД</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.exchangeStatus</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.exchangeStatus</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>0</parameter>
+                                <parameter>Соединение установлено</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>1</parameter>
+                                <parameter>Есть сообщение для ОФД</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>2</parameter>
+                                <parameter>Ожидание сообщения от ОФД</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>3</parameter>
+                                <parameter>Есть команда от ОФД</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>4</parameter>
+                                <parameter>Изменились настройки соединения с ОФД</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>5</parameter>
+                                <parameter>Ожидание ответа на команду от ОФД</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Статус информационного обмена с ОФД</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>30da2b39088f4b3faa295ea4077aeb2d</uuid>
+                            <expression>in(last(/KKT/kkt.exchangeStatus),&quot;Соединение установлено&quot;)=0</expression>
+                            <name>Проблема со связью с ОФД</name>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>616f6617ed3d417688a55304f5f04aad</uuid>
+                    <name>Критическая ошибка ФН</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.fnCriticalError</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.fnCriticalError</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Ошибок нет</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Аларм!</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>ФН</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ ФН</tag>
+                            <value>Критическая ошибка ФН</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>a7dc87a061b74e2eb3f91834edfd2b42</uuid>
+                    <name>Дней до конца срока фн</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.FNdeadline</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.FNdeadline</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>ФН</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ ФН</tag>
+                            <value>Дней до конца срока фн</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>eaf894cd00c64a3a879fe0e8374de4f8</uuid>
+                            <expression>last(/KKT/kkt.FNdeadline)&lt;=1</expression>
+                            <name>Заканчивается срок у ФН! Осталось 1 день! Срочно замените ФН!!!!</name>
+                            <priority>DISASTER</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                        <trigger>
+                            <uuid>7c0b8f560d134a61b6dc1078b066d1d5</uuid>
+                            <expression>last(/KKT/kkt.FNdeadline)&lt;=5</expression>
+                            <name>Заканчивается срок у ФН! Осталось менее 5 дней!</name>
+                            <priority>HIGH</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                        <trigger>
+                            <uuid>f37e46ef0d8e458882936f589257cbff</uuid>
+                            <expression>last(/KKT/kkt.FNdeadline)&lt;=10</expression>
+                            <name>Заканчивается срок у ФН! Осталось менее 10 дней!</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>580f8e3b126a44faa650b4b6ee9f472c</uuid>
+                    <name>Исчерпан ресурс ФН</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.fnExhausted</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.fnExhausted</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Нет</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Да</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>ФН</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ ФН</tag>
+                            <value>Исчерпан ресурс ФН</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>8b0e4a30b2d1412a8a1c0b732b99b16b</uuid>
+                    <name>Память ФН переполнена</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.fnMemoryOverflow</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.fnMemoryOverflow</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ ФН</tag>
+                            <value>Память ФН переполнена</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>9fba350fb46d433db1ff26fbf915e6ff</uuid>
+                    <name>Требуется срочная замена ФН</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.fnNeedReplacement</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Возраст в днях ПЕРВОГО не отправленного документа в ФН</description>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.fnNeedReplacement</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Нет</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>ДА!</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Ошибка</value>
+                        </tag>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Требуется срочная замена ФН</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>e198c8ba04f84693941fd91070e44242</uuid>
+                            <expression>last(/KKT/kkt.fnNeedReplacement)=&quot;ДА!&quot;</expression>
+                            <name>Требуется срочная замена ФН! (Требование ККТ)</name>
+                            <priority>DISASTER</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>f82840e538b2494baac2f3dbc7a41aac</uuid>
+                    <name>Состояние крышки</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.isCoverOpened</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.isCoverOpened</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Закрыта</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Открыта!</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Состояние крышки</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>1d260658ff324462b888c8f64c03d080</uuid>
+                            <expression>last(/KKT/kkt.isCoverOpened)=&quot;Открыта!&quot;</expression>
+                            <name>Крышка ККТ открыта!</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>abc7ceee387145bcaa5b52e86ad04369</uuid>
+                    <name>Заканчивается ли бумага</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.isPaperNearEnd</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.isPaperNearEnd</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Нет</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Мало бумаги!</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Заканчивается ли бумага</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>d44b4a4e5286416b8881a39b0527b9e3</uuid>
+                            <expression>last(/KKT/kkt.isPaperNearEnd)=&quot;Мало бумаги!&quot;</expression>
+                            <name>В кассе заканчивается лента!</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>919368667fec417a901fec2919dd90b9</uuid>
+                    <name>Наличие бумаги</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.isPaperPresent</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Возраст в днях ПЕРВОГО не отправленного документа в ФН</description>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.isPaperPresent</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>true</parameter>
+                                <parameter>Есть</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>false</parameter>
+                                <parameter>Закончилась</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Наличие бумаги</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>9726aeb657fb41418c43f3f2f162a4b7</uuid>
+                            <expression>last(/KKT/kkt.isPaperPresent)=&quot;Закончилась&quot;</expression>
+                            <name>В кассе кончилась лента!</name>
+                            <priority>HIGH</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>5aeea5c8d09744c581a06a030b1bb283</uuid>
+                    <name>Модель</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.models</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>HARDWARE</inventory_link>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ModelKKT</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Модель</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>15ed820855fe411fb7ada7767c2a888e</uuid>
+                    <name>Номер смены</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.NomberShift</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.NomberShift</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Номер смены</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>4b74e33e549e4159b1c2289e3aa2eb88</uuid>
+                    <name>Завод. № ККТ</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.RegNKKT</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.RegNKKT</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Заводской № ККТ</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>8c18828d7c5342d080432ab0a3edc20b</uuid>
+                    <name>Серийный номер ФН</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.SerNFN</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.SerNFN</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Серийный номер ФН</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>57be9f9bff984efd925fe645cb61239b</uuid>
+                            <expression>change(/KKT/kkt.SerNFN)=1</expression>
+                            <name>Изменился серийный номер ФН</name>
+                            <priority>INFO</priority>
+                            <description>Возможно произведена замена фискального накопителя или ККТ не исправна</description>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>ffbc060b34914e7a8bd28f1eb3971b7b</uuid>
+                    <name>Заводской номер</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.SerNKKT</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.SerNKKT</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Заводской номер</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>2c5b17fec28f44cd904ce411eac99cea</uuid>
+                    <name>Состояние смены</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ShiftState</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ShiftState</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>0</parameter>
+                                <parameter>Открыта</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>1</parameter>
+                                <parameter>Закрыта</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Состояние смены</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>412a7beb0e254a7696e65c64135d85ae</uuid>
+                    <name>Версия прошивки</name>
+                    <type>DEPENDENT</type>
+                    <key>kkt.ver.po</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>SOFTWARE</inventory_link>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.MicroProgramVer</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Версия прошивки</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>d16ee665266944c49bf22b0dc7d35184</uuid>
+                    <name>Номер автомата</name>
+                    <type>DEPENDENT</type>
+                    <key>machineNumber</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.machineNumber</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Номер автомата</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>a2b866f4b07e49419e507475bb4cbc10</uuid>
+                    <name>Название ОФД</name>
+                    <type>DEPENDENT</type>
+                    <key>ofdName</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ofdName</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Название ОФД</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>a90c6df325cc454d940512057318b7d7</uuid>
+                    <name>ИНН ОФД</name>
+                    <type>DEPENDENT</type>
+                    <key>ofdVATIN</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.ofdVATIN</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>ИНН ОФД</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>9cf2ce7a28c646d8a7c16539753fe740</uuid>
+                    <name>Признак автономного режима</name>
+                    <type>DEPENDENT</type>
+                    <key>offlineModeSign</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.offlineModeSign</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Признак автономного режима</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>58f55056b2034c048e9836b4d5f33d98</uuid>
+                    <name>Адрес расчетов</name>
+                    <type>DEPENDENT</type>
+                    <key>organizationAddress</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.organizationAddress</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Адрес расчетов</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>197c9df3040f495494e23266a5496940</uuid>
+                    <name>E-mail организации</name>
+                    <type>DEPENDENT</type>
+                    <key>organizationEmail</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.organizationEmail</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>E-mail организации</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>27a9e10f71844beca1b67d68947a95c6</uuid>
+                    <name>Название организации</name>
+                    <type>DEPENDENT</type>
+                    <key>organizationName</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.organizationName</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Название организации</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>bb66a4833e6348bca3b3b128dfff080e</uuid>
+                    <name>ИНН организации</name>
+                    <type>DEPENDENT</type>
+                    <key>organizationVATIN</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.organizationVATIN</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>ИНН организации</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>748af552e87f461481cb989c6f9c6ae3</uuid>
+                    <name>Адрес места расчетов</name>
+                    <type>DEPENDENT</type>
+                    <key>paymentsAddress</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.paymentsAddress</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Адрес места расчетов</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>87baed2bdf964b6a80353b66783e0651</uuid>
+                    <name>Регистрационный номер устройства</name>
+                    <type>DEPENDENT</type>
+                    <key>registrationNumber</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.registrationNumber</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Регистрационный номер устройства</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>0453238f97a2435ca7339a016ffd716e</uuid>
+                    <name>ATOL service не доступен</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>service.info[&quot;AtolLicSvc&quot;,state]</key>
+                    <history>5d</history>
+                    <trends>30d</trends>
+                </item>
+                <item>
+                    <uuid>f2e002b96969424c88a9e392638f94e1</uuid>
+                    <name>RBSOFT DeviceNet 3.0 WCF не доступен</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>service.info[&quot;RBSOFT DeviceNet 3.0 WCF&quot;,state]</key>
+                    <delay>1m;1m/1-7,09:10-21:00</delay>
+                    <history>5d</history>
+                    <trends>30d</trends>
+                </item>
+                <item>
+                    <uuid>b6ab3380fe0349f7a55f76361e2198d9</uuid>
+                    <name>RBSOFT DeviceNet 3.0 WEB не доступен</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>service.info[&quot;RBSOFT DeviceNet 3.0 WEB&quot;,state]</key>
+                    <delay>1m;1m/1-7,09:10-21:00</delay>
+                    <history>5d</history>
+                    <trends>30d</trends>
+                </item>
+                <item>
+                    <uuid>ff8a30299fd245aba8e4fae72cabe779</uuid>
+                    <name>Диспетчер печати не доступен</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>service.info[&quot;Spooler&quot;,state]</key>
+                    <history>5d</history>
+                    <trends>30d</trends>
+                </item>
+                <item>
+                    <uuid>1996c3e4a774471c858320e337ac0abd</uuid>
+                    <name>Признак расчетов за услуги</name>
+                    <type>DEPENDENT</type>
+                    <key>serviceSign</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.serviceSign</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Признак расчетов за услуги</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>b90d0be7eafc4deb84f23084de4d8af3</uuid>
+                    <name>Системы налогообложения</name>
+                    <type>DEPENDENT</type>
+                    <key>taxationTypes</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.taxationTypes</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ Рег</tag>
+                            <value>Версия прошивки</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>c30d963a36a64cf8b2897eae5c2a14ce</uuid>
+                    <name>Количество не отправленных документов</name>
+                    <type>DEPENDENT</type>
+                    <key>unsentCount</key>
+                    <delay>0</delay>
+                    <units>Шт</units>
+                    <description>Количество не отправленных документов в ФН</description>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.unsentCount</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    </master_item>
+                    <tags>
+                        <tag>
+                            <tag>ККТ</tag>
+                            <value>Возраст ФН</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>49aba170d5d84cea9e30414ba78c5852</uuid>
+                            <expression>last(/KKT/unsentCount)&gt;0</expression>
+                            <name>Есть не отправленные документы {ITEM.VALUE}</name>
+                            <priority>AVERAGE</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>d089147d31244f00a43e264d73771115</uuid>
+                    <name>KKTJson</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</key>
+                    <delay>1h</delay>
+                    <history>5d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>vfs.file.contents[C:\Program Files\Zabbix Agent\data.json,utf-8]</description>
+                    <tags>
+                        <tag>
+                            <tag>ККТJson</tag>
+                            <value>Json</value>
+                        </tag>
+                    </tags>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>
